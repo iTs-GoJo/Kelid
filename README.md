@@ -69,4 +69,4 @@ kelid run "$(cat encoded.txt)"
 
 - **Name:** Ali Jafari  
 - **Email:** thealiapi@gmail.com
-- **GitHub:** [yourusername](https://github.com/iTs-GoJo)
+- **GitHub:** [iTs-Gojo](https://github.com/iTs-GoJo)
