@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="kelid",
-    version="1.9.7",
+    version="2.4.1",
     description="Kelid is a Python code locker using marshal and base64.",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
