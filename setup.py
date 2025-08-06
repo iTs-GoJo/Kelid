@@ -2,25 +2,24 @@ from setuptools import setup, find_packages
 
 setup(
     name="kelid",
-    version="2.4.1",
-    description="Kelid is a Python code locker using marshal and base64.",
+    version="2.7.4",
+    author="Ali jafari",
+    author_email="thealiapi@gmail.com",
+    description="Simple Python code locker using marshal + base64",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    author="Ali-Jafari",
-    author_email="thealiapi@gmail.com",
-    url="https://github.com/iTs-GoJo/kelid",  # آدرس گیت‌هابت رو جایگزین کن اگه داری
+    url="https://github.com/iTs-GoJo/Kelid",
     packages=find_packages(),
-    python_requires=">=3.6",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    python_requires='>=3.6',
     entry_points={
         "console_scripts": [
-            "kelid = kelid.cli:main",
+            "kelid-encode=kelid.cli:main",
+            "kelid-run=kelid.cli:main",
         ],
     },
-    include_package_data=True,
-    zip_safe=False,
 )
