@@ -9,4 +9,4 @@ def write_file(path: str, data: str):
         f.write(data)
 
 def is_python_file(path: str) -> bool:
-    return path.endswith(".py") and os.path.isfile(path)
+    return os.path.isfile(path) and path.endswith(".py")
