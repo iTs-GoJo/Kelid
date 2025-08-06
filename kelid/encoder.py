@@ -1,14 +1,20 @@
-import marshal, base64
+import sys
+from kelid.core import encode
+from kelid.utils import read_file, write_file
 
-def encode_file(input_file: str, output_file: str):
-    with open(input_file, "r", encoding="utf-8") as f:
-        source = f.read()
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python encoder.py <input_file.py> [output_file.kl]")
+        sys.exit(1)
 
-    code = compile(source, "<string>", "exec")
-    marshaled = marshal.dumps(code)
-    encoded = base64.b64encode(marshaled)
+    input_file = sys.argv[1]
+    output_file = sys.argv[2] if len(sys.argv) > 2 else input_file.rsplit('.',1)[0] + ".kl"
 
-    with open(output_file, "wb") as f:
-        f.write(encoded)
+    code = read_file(input_file)
+    encoded_code = encode(code)
+    write_file(output_file, encoded_code)
 
-    print(f"[✓] فایل با موفقیت رمزنگاری شد: {output_file}")
+    print(f"✅ فایل رمزگذاری شده ذخیره شد: {output_file}")
+
+if __name__ == "__main__":
+    main()
