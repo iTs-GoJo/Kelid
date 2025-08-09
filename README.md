@@ -5,6 +5,15 @@
 
 ---
 
+![Stars](https://img.shields.io/github/stars/iTs-GoJo/Kelid?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/iTs-GoJo/Kelid?style=for-the-badge)
+![Release](https://img.shields.io/github/v/release/iTs-GoJo/Kelid?style=for-the-badge)
+![Commit Activity](https://img.shields.io/github/commit-activity/m/iTs-GoJo/Kelid?style=for-the-badge)
+![Contributors](https://img.shields.io/github/contributors/iTs-GoJo/Kelid?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/iTs-GoJo/Kelid?style=for-the-badge)
+
+---
+
 ## ⚙️ نصب
 
 ```bash
