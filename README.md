@@ -1,22 +1,19 @@
 <div align="center">
-  
-# 🔐 Kelid
-
-**A lightweight Python library for encoding & running Python code using `marshal` and `base64`.**  
-کلید یک ابزار ساده برای رمزگذاری و اجرای کدهای پایتون است.
-
----
-
-![Stars](https://img.shields.io/github/stars/iTs-GoJo/Kelid?color=yellow&style=for-the-badge)
-![Forks](https://img.shields.io/github/forks/iTs-GoJo/Kelid?color=orange&style=for-the-badge)
-![Release](https://img.shields.io/github/v/release/iTs-GoJo/Kelid?color=brightgreen&style=for-the-badge)
-![Commit Activity](https://img.shields.io/github/commit-activity/m/iTs-GoJo/Kelid?color=blue&style=for-the-badge)
-![Contributors](https://img.shields.io/github/contributors/iTs-GoJo/Kelid?color=purple&style=for-the-badge)
-![Last Commit](https://img.shields.io/github/last-commit/iTs-GoJo/Kelid?color=red&style=for-the-badge)
-
----
-
+  <h3>🔐 Kelid - Simple Python Code Encoder & Runner</h3>
 </div>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/iTs-GoJo/Kelid/main/logo.png" alt="Kelid Logo" width="150">
+</p>
+
+![GitHub stars](https://img.shields.io/github/stars/iTs-GoJo/Kelid?style=social)
+![GitHub forks](https://img.shields.io/github/forks/iTs-GoJo/Kelid?style=social)
+![GitHub release](https://img.shields.io/github/v/release/iTs-GoJo/Kelid)
+![Commit Activity](https://img.shields.io/github/commit-activity/m/iTs-GoJo/Kelid)
+[![GitHub contributors](https://img.shields.io/github/contributors/iTs-GoJo/Kelid)](https://github.com/iTs-GoJo/Kelid/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/iTs-GoJo/Kelid)](https://github.com/iTs-GoJo/Kelid/commits/)
+
+---
 
 ## ⚙️ نصب
 
@@ -28,31 +25,15 @@ pip install kelid
 
 ## 🚀 نمونه‌های استفاده
 
-### 📌 استفاده ترمینالی (CLI)
-
-- **رمزگذاری یک فایل پایتون و ذخیره خروجی در فایل**
+### استفاده ترمینالی (CLI)
 
 ```bash
 kelid encode script.py -o locked.txt
-```
-
-- **رمزگذاری یک فایل پایتون و چاپ خروجی در ترمینال**
-
-```bash
 kelid encode script.py
-```
-
-- **اجرای رشته رمزگذاری شده (base64) در ترمینال**
-
-```bash
 kelid run "cHJpbnQoJ1NhbGFtIGRvY3QhJyk="
 ```
 
----
-
-### 📌 استفاده در فایل پایتون
-
-#### 🔹 رمزگذاری و اجرای کد به صورت داینامیک
+### استفاده در پایتون
 
 ```python
 from kelid import encode, run
@@ -65,42 +46,25 @@ greet()
 '''
 
 encoded = encode(code)
-print("کد رمزگذاری شده:")
-print(encoded)
-
-print("\nاجرای کد رمزگذاری شده:")
+print("Encoded:", encoded)
 run(encoded)
 ```
 
-#### 🔹 رمزگذاری و ذخیره فایل رمز شده، سپس اجرای آن
+---
 
-```python
-from kelid import encode, run
+### 📸 نمونه اسکرین‌شات‌ها
 
-# خواندن کد از فایل و رمزگذاری
-with open("script.py", "r", encoding="utf-8") as f:
-    source_code = f.read()
-
-encoded_code = encode(source_code)
-
-# ذخیره کد رمز شده در فایل
-with open("locked_code.txt", "w", encoding="utf-8") as f:
-    f.write(encoded_code)
-
-# خواندن و اجرای کد رمز شده از فایل
-with open("locked_code.txt", "r", encoding="utf-8") as f:
-    locked_code = f.read()
-
-run(locked_code)
-```
+<div align="center">
+  <img src="https://raw.githubusercontent.com/iTs-GoJo/Kelid/main/images/img1.jpg" alt="Screenshot 1" style="width: 25%; height: auto; margin: 5px; border-radius: 9px;">
+  <img src="https://raw.githubusercontent.com/iTs-GoJo/Kelid/main/images/img2.jpg" alt="Screenshot 2" style="width: 25%; height: auto; margin: 5px; border-radius: 9px;">
+</div>
 
 ---
 
 ## ⚠️ هشدار امنیتی
 
-- این روش فقط برای جلوگیری از دیدن مستقیم سورس‌کد استفاده می‌شود و امنیت بالایی ندارد.  
-- افراد حرفه‌ای می‌توانند به راحتی کد رمز شده را بازگردانی کنند.  
-- برای محافظت واقعی، از ابزارهای پیشرفته‌تری مثل [PyArmor](https://github.com/dashingsoft/pyarmor) استفاده کنید.
+- این روش امنیت بالا ندارد و فقط برای جلوگیری از مشاهده مستقیم کد است.
+- برای امنیت بیشتر از [PyArmor](https://github.com/dashingsoft/pyarmor) استفاده کنید.
 
 ---
 
@@ -114,5 +78,4 @@ run(locked_code)
 
 ## 🪪 لایسنس
 
-این پروژه تحت مجوز [MIT](LICENSE) منتشر شده است.  
-می‌توانید آزادانه استفاده و تغییر دهید. ✌️
+تحت مجوز [MIT](LICENSE) منتشر شده است.
