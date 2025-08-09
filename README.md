@@ -21,19 +21,41 @@
 pip install kelid
 ```
 
+## ⚙️ نصب
+
+```bash
+pip install kelid
+```
+
 ---
 
 ## 🚀 نمونه‌های استفاده
 
 ### استفاده ترمینالی (CLI)
 
+- رمزگذاری یک فایل پایتون و ذخیره خروجی در فایل:
+
 ```bash
 kelid encode script.py -o locked.txt
+```
+
+- رمزگذاری یک فایل پایتون و چاپ خروجی در ترمینال:
+
+```bash
 kelid encode script.py
+```
+
+- اجرای رشته رمزگذاری شده (base64) در ترمینال:
+
+```bash
 kelid run "cHJpbnQoJ1NhbGFtIGRvY3QhJyk="
 ```
 
-### استفاده در پایتون
+---
+
+### استفاده در فایل پایتون
+
+#### رمزگذاری و اجرای کد به صورت داینامیک
 
 ```python
 from kelid import encode, run
@@ -46,25 +68,42 @@ greet()
 '''
 
 encoded = encode(code)
-print("Encoded:", encoded)
+print("کد رمزگذاری شده:")
+print(encoded)
+
+print("\nاجرای کد رمزگذاری شده:")
 run(encoded)
 ```
 
----
+#### رمزگذاری و ذخیره فایل رمز شده، سپس اجرای آن
 
-### 📸 نمونه اسکرین‌شات‌ها
+```python
+from kelid import encode, run
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/iTs-GoJo/Kelid/main/images/img1.jpg" alt="Screenshot 1" style="width: 25%; height: auto; margin: 5px; border-radius: 9px;">
-  <img src="https://raw.githubusercontent.com/iTs-GoJo/Kelid/main/images/img2.jpg" alt="Screenshot 2" style="width: 25%; height: auto; margin: 5px; border-radius: 9px;">
-</div>
+# خواندن کد از فایل و رمزگذاری
+with open("script.py", "r", encoding="utf-8") as f:
+    source_code = f.read()
+
+encoded_code = encode(source_code)
+
+# ذخیره کد رمز شده در فایل
+with open("locked_code.txt", "w", encoding="utf-8") as f:
+    f.write(encoded_code)
+
+# خواندن و اجرای کد رمز شده از فایل
+with open("locked_code.txt", "r", encoding="utf-8") as f:
+    locked_code = f.read()
+
+run(locked_code)
+```
 
 ---
 
 ## ⚠️ هشدار امنیتی
 
-- این روش امنیت بالا ندارد و فقط برای جلوگیری از مشاهده مستقیم کد است.
-- برای امنیت بیشتر از [PyArmor](https://github.com/dashingsoft/pyarmor) استفاده کنید.
+- این روش فقط برای جلوگیری از دیدن مستقیم سورس‌کد استفاده می‌شود و امنیت بالایی ندارد.  
+- افراد حرفه‌ای می‌توانند به راحتی کد رمز شده را بازگردانی کنند.  
+- برای محافظت واقعی، از ابزارهای پیشرفته‌تری مثل [PyArmor](https://github.com/dashingsoft/pyarmor) استفاده کنید.
 
 ---
 
@@ -78,4 +117,5 @@ run(encoded)
 
 ## 🪪 لایسنس
 
-تحت مجوز [MIT](LICENSE) منتشر شده است.
+این پروژه تحت مجوز [MIT](LICENSE) منتشر شده است.  
+می‌توانید آزادانه استفاده و تغییر دهید. ✌️
