@@ -1,18 +1,22 @@
+<div align="center">
+  
 # 🔐 Kelid
 
-**Kelid** (کلید) یک لایبرری ساده و سبک برای رمزگذاری و اجرای کدهای پایتون با استفاده از `marshal` و `base64` است.  
-این ابزار بهت کمک می‌کنه کدهای پایتونت رو به صورت رشته‌ای امن‌تر (اما نه خیلی قوی) کدگذاری و اجرا کنی.
+**A lightweight Python library for encoding & running Python code using `marshal` and `base64`.**  
+کلید یک ابزار ساده برای رمزگذاری و اجرای کدهای پایتون است.
 
 ---
 
-![Stars](https://img.shields.io/github/stars/iTs-GoJo/Kelid?style=for-the-badge)
-![Forks](https://img.shields.io/github/forks/iTs-GoJo/Kelid?style=for-the-badge)
-![Release](https://img.shields.io/github/v/release/iTs-GoJo/Kelid?style=for-the-badge)
-![Commit Activity](https://img.shields.io/github/commit-activity/m/iTs-GoJo/Kelid?style=for-the-badge)
-![Contributors](https://img.shields.io/github/contributors/iTs-GoJo/Kelid?style=for-the-badge)
-![Last Commit](https://img.shields.io/github/last-commit/iTs-GoJo/Kelid?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/iTs-GoJo/Kelid?color=yellow&style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/iTs-GoJo/Kelid?color=orange&style=for-the-badge)
+![Release](https://img.shields.io/github/v/release/iTs-GoJo/Kelid?color=brightgreen&style=for-the-badge)
+![Commit Activity](https://img.shields.io/github/commit-activity/m/iTs-GoJo/Kelid?color=blue&style=for-the-badge)
+![Contributors](https://img.shields.io/github/contributors/iTs-GoJo/Kelid?color=purple&style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/iTs-GoJo/Kelid?color=red&style=for-the-badge)
 
 ---
+
+</div>
 
 ## ⚙️ نصب
 
@@ -24,21 +28,21 @@ pip install kelid
 
 ## 🚀 نمونه‌های استفاده
 
-### استفاده ترمینالی (CLI)
+### 📌 استفاده ترمینالی (CLI)
 
-- رمزگذاری یک فایل پایتون و ذخیره خروجی در فایل:
+- **رمزگذاری یک فایل پایتون و ذخیره خروجی در فایل**
 
 ```bash
 kelid encode script.py -o locked.txt
 ```
 
-- رمزگذاری یک فایل پایتون و چاپ خروجی در ترمینال:
+- **رمزگذاری یک فایل پایتون و چاپ خروجی در ترمینال**
 
 ```bash
 kelid encode script.py
 ```
 
-- اجرای رشته رمزگذاری شده (base64) در ترمینال:
+- **اجرای رشته رمزگذاری شده (base64) در ترمینال**
 
 ```bash
 kelid run "cHJpbnQoJ1NhbGFtIGRvY3QhJyk="
@@ -46,9 +50,9 @@ kelid run "cHJpbnQoJ1NhbGFtIGRvY3QhJyk="
 
 ---
 
-### استفاده در فایل پایتون
+### 📌 استفاده در فایل پایتون
 
-#### رمزگذاری و اجرای کد به صورت داینامیک
+#### 🔹 رمزگذاری و اجرای کد به صورت داینامیک
 
 ```python
 from kelid import encode, run
@@ -68,7 +72,7 @@ print("\nاجرای کد رمزگذاری شده:")
 run(encoded)
 ```
 
-#### رمزگذاری و ذخیره فایل رمز شده، سپس اجرای آن
+#### 🔹 رمزگذاری و ذخیره فایل رمز شده، سپس اجرای آن
 
 ```python
 from kelid import encode, run
