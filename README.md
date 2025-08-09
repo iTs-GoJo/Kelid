@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/iTs-GoJo/Kelid/main/logo.png" alt="Kelid Logo" width="150">
+  <img src="https://raw.githubusercontent.com/iTs-GoJo/Kelid/main/file_000000009ac0620a95ec4a89feb80a83.png" alt="Kelid Logo" width="150">
 </p>
 
 ![GitHub stars](https://img.shields.io/github/stars/iTs-GoJo/Kelid?style=social)
