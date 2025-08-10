@@ -15,7 +15,7 @@
 
 ---
 
-## ⚙️ نصب
+## ⚙️ Install
 
 ```bash
 pip install kelid
@@ -23,23 +23,23 @@ pip install kelid
 
 ---
 
-## 🚀 نمونه‌های استفاده
+## 🚀 Use samples
 
-### استفاده ترمینالی (CLI)
+### Use Terminal (CLI)
 
-- رمزگذاری یک فایل پایتون و ذخیره خروجی در فایل:
+- Encrypting a Python file and saving output in the file:
 
 ```bash
 kelid encode script.py -o locked.txt
 ```
 
-- رمزگذاری یک فایل پایتون و چاپ خروجی در ترمینال:
+- Encrypting a Python file and output printing in terminal:
 
 ```bash
 kelid encode script.py
 ```
 
-- اجرای رشته رمزگذاری شده (base64) در ترمینال:
+- Run the encrypted string (Base64) in Terminal:
 
 ```bash
 kelid run "cHJpbnQoJ1NhbGFtIGRvY3QhJyk="
@@ -47,44 +47,42 @@ kelid run "cHJpbnQoJ1NhbGFtIGRvY3QhJyk="
 
 ---
 
-### استفاده در فایل پایتون
+### Use in Python file:
 
-#### رمزگذاری و اجرای کد به صورت داینامیک
+#### Encryption and execute the code as dynamic
 
 ```python
 from kelid import encode, run
 
 code = '''
 def greet():
-    print("سلام داداش، این یه تست Kelid هست!")
+    print("This test is the kelid ")
 
 greet()
 '''
 
 encoded = encode(code)
-print("کد رمزگذاری شده:")
+print("encoded code:")
 print(encoded)
 
-print("\nاجرای کد رمزگذاری شده:")
+print("\nRun the encrypted code:")
 run(encoded)
 ```
 
-#### رمزگذاری و ذخیره فایل رمز شده، سپس اجرای آن
+#### Encrypted and saved the encrypted file, then run it
 
 ```python
 from kelid import encode, run
 
-# خواندن کد از فایل و رمزگذاری
 with open("script.py", "r", encoding="utf-8") as f:
     source_code = f.read()
 
 encoded_code = encode(source_code)
 
-# ذخیره کد رمز شده در فایل
 with open("locked_code.txt", "w", encoding="utf-8") as f:
     f.write(encoded_code)
 
-# خواندن و اجرای کد رمز شده از فایل
+
 with open("locked_code.txt", "r", encoding="utf-8") as f:
     locked_code = f.read()
 
@@ -93,22 +91,20 @@ run(locked_code)
 
 ---
 
-## ⚠️ هشدار امنیتی
+## ❗ Security Alert 
 
-- این روش فقط برای جلوگیری از دیدن مستقیم سورس‌کد استفاده می‌شود و امنیت بالایی ندارد.  
-- افراد حرفه‌ای می‌توانند به راحتی کد رمز شده را بازگردانی کنند.  
-- برای محافظت واقعی، از ابزارهای پیشرفته‌تری مثل [PyArmor](https://github.com/dashingsoft/pyarmor) استفاده کنید.
+ This method is only used to prevent the source from seeing the source and not high security.   - Professionals can easily restore encrypted code.   - For real protection, use more advanced tools such as [Pyarmor] (https://github.com/dashingsoft/pyarmor).
 
 ---
 
-## 🧑‍💻 نویسنده
+## 🧑‍💻 Author
 
 - **Ali Jafari**  
-- ایمیل: thealiapi@gmail.com  
-- گیت‌هاب: [iTs-GoJo](https://github.com/iTs-GoJo)
+- Email: thealiapi@gmail.com  
+- GitHub: [iTs-GoJo](https://github.com/iTs-GoJo)
 
 ---
 
-## 🪪 لایسنس
+## 🪪LICENSE 
 
-کلید تحت لایسنس[MIT](LICENSE) منتشر شده است.
+Key is released under the [MIT](LICENSE) license.
