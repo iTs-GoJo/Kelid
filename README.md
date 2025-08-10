@@ -105,6 +105,6 @@ run(locked_code)
 
 ---
 
-##🪪LICENSE 
+##🪪 LICENSE 
 
 Key is released under the [MIT](LICENSE) license.
