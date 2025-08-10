@@ -93,7 +93,7 @@ run(locked_code)
 
 ## ❗ Security Alert 
 
- This method is only used to prevent the source from seeing the source and not high security.   - Professionals can easily restore encrypted code.   - For real protection, use more advanced tools such as [Pyarmor] (https://github.com/dashingsoft/pyarmor).
+ This method is only used to prevent the source from seeing the source and not high security.   - Professionals can easily restore encrypted code.   - For real protection, use more advanced tools such as [Pyarmor](https://github.com/dashingsoft/pyarmor) .
 
 ---
 
@@ -105,6 +105,6 @@ run(locked_code)
 
 ---
 
-## 🪪LICENSE 
+##🪪LICENSE 
 
 Key is released under the [MIT](LICENSE) license.
