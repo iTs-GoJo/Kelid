@@ -1,5 +1,5 @@
 <div align="center">
-  <h3>🔐 Kelid - Simple Python Code Encoder & Runner</h3>
+  <h3>🔐 Kelid - Python Code Encoder & Runner</h3>
 </div>
 
 <p align="center">
